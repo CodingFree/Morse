@@ -1,30 +1,49 @@
 <!doctype html>
 <html>
-<head>
-  <title>Morse</title>
-  <meta charset="utf-8">
-  <link href="styles/gaiabb/headers.css" rel="stylesheet" type="text/css">
-  <link href="styles/gaiabb/unput_areas.css" rel="stylesheet" type="text/css">
-  <link href="styles/main.css" rel="stylesheet" type="text/css">
-  <script defer src="/scripts/main.js"></script>
-</head>
-<body>
-<article>
-	<section role="region">
-		<header>
-		    <h1>Morse</h1>
-		</header>
-		<p>Enter a morse string (not an alphanumeric string) and your device will vibrate:</p>
-		<form id="form" name="morse">
-			<p>
-				<input name=code type="text" placeholder="Morse Code" autofocus required="" pattern="([+.|+\s|+-]){1,}" title="Just a morse string">
-				<button id="sendButton">Vibrate</button>
-				<button id="cancel">Cancel</button>
-			</p>
-			</p>
-		</form>
-	</section>
-</article>
-</body>
-</html>
+    
+    <head>
+        <title>Morse</title>
+        <meta charset="utf-8">
+        <link href="styles/main.css" rel="stylesheet" type="text/css">
+        <link href="styles/gaiabb/headers.css" rel="stylesheet" type="text/css">
+        <link href="styles/gaiabb/input_areas.css" rel="stylesheet" type="text/css">
+        <script defer src="/scripts/main.js"></script>
+    </head>
+    
+    <body>
+        <section role="region" id="normal-view">
+            <header>
+                <button id="returnButton"><span class="icon icon-close">close</span>
+                </button>
+                 <h1>Vibrate</h1>
 
+            </header>
+            <article>
+                <p>Enter a morse string (not an alphanumeric string) and your device will vibrate:</p>
+                <form id="vibrationForm" name="morseString">
+                    <p>
+                        <input name=code type="text" placeholder="Morse Code" autofocus required="" pattern="([+.|+\s|+-]){1,}" title="Just a morse string">
+                        <button type="submit" id="sendButton">Vibrate</button>
+                        <button type="submit" id="cancelVibration">Cancel Vibration</button>
+                    </p>
+                    </p>
+                </form>
+            </article>
+        </section>
+        <section role="region" id="translation-view">
+            <header>
+                 <h1>Translate into Morse:</h1>
+
+            </header>
+            <article>
+                <form id="translationForm" name="normalString">
+                    <p>
+                        <input name=myString type="text" placeholder="Alphanumeric String" />
+                    </p>
+                    <button type="submit" id="translateButton">Translate</button>
+                </form>
+            </article>
+        </section>
+    </body>
+
+</html>

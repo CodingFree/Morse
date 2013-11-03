@@ -1,7 +1,37 @@
+html
+  margin: 0
+  padding: 0
+  overflow: hidden
 
 body
   margin: 0
   padding: 0
 
+section[role="region"]
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: #fff
+
+#translation-view
+  z-index: 10
+
+.move-down
+  transform: translateY(100%)
+  transition: all 0.2s
+
+.move-up
+  transform: translateY(0)
+  transition: all 0.2s
+
+section[role="region"] > .icon.icon-settings
+  background-image: url(gaiabb/headers/images/icons/settings.png)
 
 
+#translation-view form
+  margin: 1.5rem
+
+button[type=submit]
+  padding: 2em
